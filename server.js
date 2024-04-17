@@ -1,14 +1,17 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+require('dotenv').config();
+require('app-module-path').addPath(__dirname);
+
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
 // Routers
 const apiRouter = require('./routes/api/v1');
 
-var app = express();
+const app = express();
 
 // Connect to Mongo via mongoose
 mongoose.set('strictQuery', false);
