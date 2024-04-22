@@ -9,7 +9,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 // Routers
-const apiRouter = require('./routes/api/v1');
+const apiRouter = require('./routes/api/v1/restaurants');
 
 const app = express();
 
